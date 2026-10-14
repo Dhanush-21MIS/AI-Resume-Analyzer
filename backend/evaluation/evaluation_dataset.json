@@ -1,0 +1,89 @@
+{
+  "description": "Starter, manually labeled evaluation examples for the AI Resume Analyzer. These examples evaluate matching behavior against controlled requirements; they are not a statistically representative benchmark.",
+  "examples": [
+    {
+      "id": "strong_backend_match",
+      "resume_text": "Backend developer. Built REST APIs with Python and FastAPI. Used PostgreSQL.",
+      "job_description": "Backend role requiring Python, FastAPI, API development, and PostgreSQL.",
+      "requirements": [
+        "Python",
+        "FastAPI",
+        "API development",
+        "PostgreSQL"
+      ],
+      "expected": {
+        "Python": "matched",
+        "FastAPI": "matched",
+        "API development": "matched",
+        "PostgreSQL": "matched"
+      }
+    },
+    {
+      "id": "partial_nosql_evidence",
+      "resume_text": "Built a project using MongoDB as its database.",
+      "job_description": "Role requiring NoSQL database experience.",
+      "requirements": [
+        "NoSQL"
+      ],
+      "expected": {
+        "NoSQL": "partially_matched"
+      }
+    },
+    {
+      "id": "react_native_not_react_js",
+      "resume_text": "Created a mobile application using React Native.",
+      "job_description": "Frontend role requiring React.js.",
+      "requirements": [
+        "React.js"
+      ],
+      "expected": {
+        "React.js": "missing"
+      }
+    },
+    {
+      "id": "api_list_without_implementation",
+      "resume_text": "Technical skills: REST APIs, Python, HTML, CSS.",
+      "job_description": "Role requiring API development.",
+      "requirements": [
+        "API development"
+      ],
+      "expected": {
+        "API development": "missing"
+      }
+    },
+    {
+      "id": "unrelated_resume",
+      "resume_text": "Graphic designer experienced in typography, branding, and page layouts.",
+      "job_description": "Backend role requiring Python, FastAPI, and PostgreSQL.",
+      "requirements": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL"
+      ],
+      "expected": {
+        "Python": "missing",
+        "FastAPI": "missing",
+        "PostgreSQL": "missing"
+      }
+    },
+    {
+      "id": "weighted_partial_coverage",
+      "resume_text": "Skills: Python.",
+      "job_description": "Role requiring Python and PostgreSQL.",
+      "requirements": [
+        {
+          "requirement": "Python",
+          "importance": 3.0
+        },
+        {
+          "requirement": "PostgreSQL",
+          "importance": 1.0
+        }
+      ],
+      "expected": {
+        "Python": "matched",
+        "PostgreSQL": "missing"
+      }
+    }
+  ]
+}

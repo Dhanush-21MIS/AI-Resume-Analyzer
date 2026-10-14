@@ -1,0 +1,608 @@
+{
+  "title": "AI Resume Analyzer and Job Matcher \u2014 End-to-End Evaluation Dataset",
+  "version": "1.0",
+  "notes": [
+    "Synthetic, manually labeled examples for development and regression testing.",
+    "The 30 role/profile cases cover ten roles with strong, mixed, and unrelated resumes.",
+    "Five adversarial cases cover React Native vs React.js, API evidence, MongoDB as partial NoSQL evidence, GitHub URL evidence, and ordinary 'express' wording.",
+    "Scores are not hiring probabilities or official ATS scores.",
+    "Review any failed case manually before changing production matching logic."
+  ],
+  "cases": [
+    {
+      "id": "python_developer_strong",
+      "role": "Python Developer",
+      "profile_type": "strong",
+      "job_description": "Role: Python Developer. Required technical skills: Python, FastAPI, PostgreSQL.",
+      "resume_text": "Python Developer with hands-on experience using Python, FastAPI, and PostgreSQL to build backend applications and data-driven services.",
+      "expected_requirements": [
+        "python",
+        "fastapi",
+        "postgresql"
+      ],
+      "expected_statuses": {
+        "python": "matched",
+        "fastapi": "matched",
+        "postgresql": "matched"
+      }
+    },
+    {
+      "id": "python_developer_mixed",
+      "role": "Python Developer",
+      "profile_type": "mixed",
+      "job_description": "Role: Python Developer. Required technical skills: Python, FastAPI, PostgreSQL.",
+      "resume_text": "Software developer with hands-on experience using Python and FastAPI to build backend APIs. Projects include API routing and request validation.",
+      "expected_requirements": [
+        "python",
+        "fastapi",
+        "postgresql"
+      ],
+      "expected_statuses": {
+        "python": "matched",
+        "fastapi": "matched",
+        "postgresql": "missing"
+      }
+    },
+    {
+      "id": "python_developer_unrelated",
+      "role": "Python Developer",
+      "profile_type": "unrelated",
+      "job_description": "Role: Python Developer. Required technical skills: Python, FastAPI, PostgreSQL.",
+      "resume_text": "Graphic design portfolio focused on typography, branding, illustration, and social media creatives.",
+      "expected_requirements": [
+        "python",
+        "fastapi",
+        "postgresql"
+      ],
+      "expected_statuses": {
+        "python": "missing",
+        "fastapi": "missing",
+        "postgresql": "missing"
+      }
+    },
+    {
+      "id": "java_developer_strong",
+      "role": "Java Developer",
+      "profile_type": "strong",
+      "job_description": "Role: Java Developer. Required technical skills: Java, Spring Boot, MySQL.",
+      "resume_text": "Java Developer experienced with Java, Spring Boot, and MySQL for backend application development.",
+      "expected_requirements": [
+        "java",
+        "spring boot",
+        "mysql"
+      ],
+      "expected_statuses": {
+        "java": "matched",
+        "spring boot": "matched",
+        "mysql": "matched"
+      }
+    },
+    {
+      "id": "java_developer_mixed",
+      "role": "Java Developer",
+      "profile_type": "mixed",
+      "job_description": "Role: Java Developer. Required technical skills: Java, Spring Boot, MySQL.",
+      "resume_text": "Developer experienced with Java and Spring Boot. Built REST endpoints and service-layer components.",
+      "expected_requirements": [
+        "java",
+        "spring boot",
+        "mysql"
+      ],
+      "expected_statuses": {
+        "java": "matched",
+        "spring boot": "matched",
+        "mysql": "missing"
+      }
+    },
+    {
+      "id": "java_developer_unrelated",
+      "role": "Java Developer",
+      "profile_type": "unrelated",
+      "job_description": "Role: Java Developer. Required technical skills: Java, Spring Boot, MySQL.",
+      "resume_text": "Graphic designer experienced with branding, illustration, typography, and visual layouts.",
+      "expected_requirements": [
+        "java",
+        "spring boot",
+        "mysql"
+      ],
+      "expected_statuses": {
+        "java": "missing",
+        "spring boot": "missing",
+        "mysql": "missing"
+      }
+    },
+    {
+      "id": "mern_stack_developer_strong",
+      "role": "MERN Stack Developer",
+      "profile_type": "strong",
+      "job_description": "Role: MERN Stack Developer. Required technical skills: React.js, Node.js, MongoDB.",
+      "resume_text": "MERN Stack Developer using React.js, Node.js, and MongoDB to build full-stack web applications.",
+      "expected_requirements": [
+        "react.js",
+        "node.js",
+        "mongodb"
+      ],
+      "expected_statuses": {
+        "react.js": "matched",
+        "node.js": "matched",
+        "mongodb": "matched"
+      }
+    },
+    {
+      "id": "mern_stack_developer_mixed",
+      "role": "MERN Stack Developer",
+      "profile_type": "mixed",
+      "job_description": "Role: MERN Stack Developer. Required technical skills: React.js, Node.js, MongoDB.",
+      "resume_text": "Full-stack developer with project experience in React.js and Node.js, including reusable components and REST endpoints.",
+      "expected_requirements": [
+        "react.js",
+        "node.js",
+        "mongodb"
+      ],
+      "expected_statuses": {
+        "react.js": "matched",
+        "node.js": "matched",
+        "mongodb": "missing"
+      }
+    },
+    {
+      "id": "mern_stack_developer_unrelated",
+      "role": "MERN Stack Developer",
+      "profile_type": "unrelated",
+      "job_description": "Role: MERN Stack Developer. Required technical skills: React.js, Node.js, MongoDB.",
+      "resume_text": "Content writer focused on editing, proofreading, documentation, and social media copy.",
+      "expected_requirements": [
+        "react.js",
+        "node.js",
+        "mongodb"
+      ],
+      "expected_statuses": {
+        "react.js": "missing",
+        "node.js": "missing",
+        "mongodb": "missing"
+      }
+    },
+    {
+      "id": "full_stack_developer_strong",
+      "role": "Full Stack Developer",
+      "profile_type": "strong",
+      "job_description": "Role: Full Stack Developer. Required technical skills: JavaScript, React.js, Express.js.",
+      "resume_text": "Full Stack Developer with JavaScript, React.js, and Express.js experience across frontend and backend features.",
+      "expected_requirements": [
+        "javascript",
+        "react.js",
+        "express.js"
+      ],
+      "expected_statuses": {
+        "javascript": "matched",
+        "react.js": "matched",
+        "express.js": "matched"
+      }
+    },
+    {
+      "id": "full_stack_developer_mixed",
+      "role": "Full Stack Developer",
+      "profile_type": "mixed",
+      "job_description": "Role: Full Stack Developer. Required technical skills: JavaScript, React.js, Express.js.",
+      "resume_text": "Frontend developer with JavaScript and React.js experience building responsive web interfaces.",
+      "expected_requirements": [
+        "javascript",
+        "react.js",
+        "express.js"
+      ],
+      "expected_statuses": {
+        "javascript": "matched",
+        "react.js": "matched",
+        "express.js": "missing"
+      }
+    },
+    {
+      "id": "full_stack_developer_unrelated",
+      "role": "Full Stack Developer",
+      "profile_type": "unrelated",
+      "job_description": "Role: Full Stack Developer. Required technical skills: JavaScript, React.js, Express.js.",
+      "resume_text": "Administrative assistant with scheduling, document preparation, record keeping, and office coordination experience.",
+      "expected_requirements": [
+        "javascript",
+        "react.js",
+        "express.js"
+      ],
+      "expected_statuses": {
+        "javascript": "missing",
+        "react.js": "missing",
+        "express.js": "missing"
+      }
+    },
+    {
+      "id": "ai_ml_engineer_strong",
+      "role": "AI/ML Engineer",
+      "profile_type": "strong",
+      "job_description": "Role: AI/ML Engineer. Required technical skills: Python, machine learning, PyTorch.",
+      "resume_text": "AI/ML Engineer using Python, machine learning, and PyTorch to train and evaluate classification models.",
+      "expected_requirements": [
+        "python",
+        "machine learning",
+        "pytorch"
+      ],
+      "expected_statuses": {
+        "python": "matched",
+        "machine learning": "matched",
+        "pytorch": "matched"
+      }
+    },
+    {
+      "id": "ai_ml_engineer_mixed",
+      "role": "AI/ML Engineer",
+      "profile_type": "mixed",
+      "job_description": "Role: AI/ML Engineer. Required technical skills: Python, machine learning, PyTorch.",
+      "resume_text": "Python developer who built machine learning experiments and evaluated model performance with validation data.",
+      "expected_requirements": [
+        "python",
+        "machine learning",
+        "pytorch"
+      ],
+      "expected_statuses": {
+        "python": "matched",
+        "machine learning": "matched",
+        "pytorch": "missing"
+      }
+    },
+    {
+      "id": "ai_ml_engineer_unrelated",
+      "role": "AI/ML Engineer",
+      "profile_type": "unrelated",
+      "job_description": "Role: AI/ML Engineer. Required technical skills: Python, machine learning, PyTorch.",
+      "resume_text": "Graphic designer focused on illustration, branding, page layout, and visual communication.",
+      "expected_requirements": [
+        "python",
+        "machine learning",
+        "pytorch"
+      ],
+      "expected_statuses": {
+        "python": "missing",
+        "machine learning": "missing",
+        "pytorch": "missing"
+      }
+    },
+    {
+      "id": "data_analyst_strong",
+      "role": "Data Analyst",
+      "profile_type": "strong",
+      "job_description": "Role: Data Analyst. Required technical skills: Python, SQL, Power BI.",
+      "resume_text": "Data Analyst experienced in Python, SQL, and Power BI for data cleaning, querying, and dashboard reporting.",
+      "expected_requirements": [
+        "python",
+        "sql",
+        "powerbi"
+      ],
+      "expected_statuses": {
+        "python": "matched",
+        "sql": "matched",
+        "powerbi": "matched"
+      }
+    },
+    {
+      "id": "data_analyst_mixed",
+      "role": "Data Analyst",
+      "profile_type": "mixed",
+      "job_description": "Role: Data Analyst. Required technical skills: Python, SQL, Power BI.",
+      "resume_text": "Data analyst using Python and SQL to clean datasets, run queries, and prepare reports.",
+      "expected_requirements": [
+        "python",
+        "sql",
+        "powerbi"
+      ],
+      "expected_statuses": {
+        "python": "matched",
+        "sql": "matched",
+        "powerbi": "missing"
+      }
+    },
+    {
+      "id": "data_analyst_unrelated",
+      "role": "Data Analyst",
+      "profile_type": "unrelated",
+      "job_description": "Role: Data Analyst. Required technical skills: Python, SQL, Power BI.",
+      "resume_text": "Customer service representative with experience in customer communication, issue tracking, and documentation.",
+      "expected_requirements": [
+        "python",
+        "sql",
+        "powerbi"
+      ],
+      "expected_statuses": {
+        "python": "missing",
+        "sql": "missing",
+        "powerbi": "missing"
+      }
+    },
+    {
+      "id": "devops_engineer_strong",
+      "role": "DevOps Engineer",
+      "profile_type": "strong",
+      "job_description": "Role: DevOps Engineer. Required technical skills: Docker, Kubernetes, CI/CD.",
+      "resume_text": "DevOps Engineer with practical experience using Docker, Kubernetes, and CI/CD pipelines.",
+      "expected_requirements": [
+        "docker",
+        "kubernetes",
+        "ci/cd"
+      ],
+      "expected_statuses": {
+        "docker": "matched",
+        "kubernetes": "matched",
+        "ci/cd": "matched"
+      }
+    },
+    {
+      "id": "devops_engineer_mixed",
+      "role": "DevOps Engineer",
+      "profile_type": "mixed",
+      "job_description": "Role: DevOps Engineer. Required technical skills: Docker, Kubernetes, CI/CD.",
+      "resume_text": "Developer who packaged applications with Docker and deployed containers to a Kubernetes environment.",
+      "expected_requirements": [
+        "docker",
+        "kubernetes",
+        "ci/cd"
+      ],
+      "expected_statuses": {
+        "docker": "matched",
+        "kubernetes": "matched",
+        "ci/cd": "missing"
+      }
+    },
+    {
+      "id": "devops_engineer_unrelated",
+      "role": "DevOps Engineer",
+      "profile_type": "unrelated",
+      "job_description": "Role: DevOps Engineer. Required technical skills: Docker, Kubernetes, CI/CD.",
+      "resume_text": "Marketing assistant experienced in campaign planning, content calendars, and social media reporting.",
+      "expected_requirements": [
+        "docker",
+        "kubernetes",
+        "ci/cd"
+      ],
+      "expected_statuses": {
+        "docker": "missing",
+        "kubernetes": "missing",
+        "ci/cd": "missing"
+      }
+    },
+    {
+      "id": "cloud_engineer_strong",
+      "role": "Cloud Engineer",
+      "profile_type": "strong",
+      "job_description": "Role: Cloud Engineer. Required technical skills: AWS, Azure, GCP.",
+      "resume_text": "Cloud Engineer with hands-on experience using AWS, Azure, and GCP for cloud infrastructure tasks.",
+      "expected_requirements": [
+        "aws",
+        "azure",
+        "gcp"
+      ],
+      "expected_statuses": {
+        "aws": "matched",
+        "azure": "matched",
+        "gcp": "matched"
+      }
+    },
+    {
+      "id": "cloud_engineer_mixed",
+      "role": "Cloud Engineer",
+      "profile_type": "mixed",
+      "job_description": "Role: Cloud Engineer. Required technical skills: AWS, Azure, GCP.",
+      "resume_text": "Cloud support engineer with experience in AWS and Microsoft Azure services.",
+      "expected_requirements": [
+        "aws",
+        "azure",
+        "gcp"
+      ],
+      "expected_statuses": {
+        "aws": "matched",
+        "azure": "matched",
+        "gcp": "missing"
+      }
+    },
+    {
+      "id": "cloud_engineer_unrelated",
+      "role": "Cloud Engineer",
+      "profile_type": "unrelated",
+      "job_description": "Role: Cloud Engineer. Required technical skills: AWS, Azure, GCP.",
+      "resume_text": "Video editor experienced with timeline editing, color correction, audio synchronization, and motion graphics.",
+      "expected_requirements": [
+        "aws",
+        "azure",
+        "gcp"
+      ],
+      "expected_statuses": {
+        "aws": "missing",
+        "azure": "missing",
+        "gcp": "missing"
+      }
+    },
+    {
+      "id": "cybersecurity_engineer_strong",
+      "role": "Cybersecurity Engineer",
+      "profile_type": "strong",
+      "job_description": "Role: Cybersecurity Engineer. Required technical skills: Cybersecurity, Linux, JWT.",
+      "resume_text": "Cybersecurity Engineer with experience in cybersecurity practices, Linux systems, and JWT authentication.",
+      "expected_requirements": [
+        "cybersecurity",
+        "linux",
+        "jwt"
+      ],
+      "expected_statuses": {
+        "cybersecurity": "matched",
+        "linux": "matched",
+        "jwt": "matched"
+      }
+    },
+    {
+      "id": "cybersecurity_engineer_mixed",
+      "role": "Cybersecurity Engineer",
+      "profile_type": "mixed",
+      "job_description": "Role: Cybersecurity Engineer. Required technical skills: Cybersecurity, Linux, JWT.",
+      "resume_text": "Security-focused developer with cybersecurity and Linux experience supporting system hardening and access controls.",
+      "expected_requirements": [
+        "cybersecurity",
+        "linux",
+        "jwt"
+      ],
+      "expected_statuses": {
+        "cybersecurity": "matched",
+        "linux": "matched",
+        "jwt": "missing"
+      }
+    },
+    {
+      "id": "cybersecurity_engineer_unrelated",
+      "role": "Cybersecurity Engineer",
+      "profile_type": "unrelated",
+      "job_description": "Role: Cybersecurity Engineer. Required technical skills: Cybersecurity, Linux, JWT.",
+      "resume_text": "Graphic design specialist experienced in branding, typography, illustration, and visual design systems.",
+      "expected_requirements": [
+        "cybersecurity",
+        "linux",
+        "jwt"
+      ],
+      "expected_statuses": {
+        "cybersecurity": "missing",
+        "linux": "missing",
+        "jwt": "missing"
+      }
+    },
+    {
+      "id": "software_engineer_intern_strong",
+      "role": "Software Engineer Intern",
+      "profile_type": "strong",
+      "job_description": "Role: Software Engineer Intern. Required technical skills: object-oriented programming, data structures, unit testing.",
+      "resume_text": "Software Engineer Intern with knowledge of object-oriented programming, data structures, and unit testing.",
+      "expected_requirements": [
+        "object-oriented programming",
+        "data structures",
+        "unit testing"
+      ],
+      "expected_statuses": {
+        "object-oriented programming": "matched",
+        "data structures": "matched",
+        "unit testing": "matched"
+      }
+    },
+    {
+      "id": "software_engineer_intern_mixed",
+      "role": "Software Engineer Intern",
+      "profile_type": "mixed",
+      "job_description": "Role: Software Engineer Intern. Required technical skills: object-oriented programming, data structures, unit testing.",
+      "resume_text": "Computer science student applying object-oriented programming and data structures in coursework and coding projects.",
+      "expected_requirements": [
+        "object-oriented programming",
+        "data structures",
+        "unit testing"
+      ],
+      "expected_statuses": {
+        "object-oriented programming": "matched",
+        "data structures": "matched",
+        "unit testing": "missing"
+      }
+    },
+    {
+      "id": "software_engineer_intern_unrelated",
+      "role": "Software Engineer Intern",
+      "profile_type": "unrelated",
+      "job_description": "Role: Software Engineer Intern. Required technical skills: object-oriented programming, data structures, unit testing.",
+      "resume_text": "Office assistant experienced with scheduling, filing, spreadsheet formatting, and meeting coordination.",
+      "expected_requirements": [
+        "object-oriented programming",
+        "data structures",
+        "unit testing"
+      ],
+      "expected_statuses": {
+        "object-oriented programming": "missing",
+        "data structures": "missing",
+        "unit testing": "missing"
+      }
+    },
+    {
+      "id": "mern_react_native_not_react_js",
+      "role": "MERN Stack Developer",
+      "profile_type": "adversarial",
+      "job_description": "Role: Frontend Developer. Required technical skills: React.js, JavaScript, CSS.",
+      "resume_text": "Frontend developer using React Native, JavaScript, and CSS to build mobile interfaces.",
+      "expected_requirements": [
+        "react.js",
+        "javascript",
+        "css"
+      ],
+      "expected_statuses": {
+        "react.js": "missing",
+        "javascript": "matched",
+        "css": "matched"
+      }
+    },
+    {
+      "id": "api_mention_without_build_evidence",
+      "role": "Backend Developer",
+      "profile_type": "adversarial",
+      "job_description": "Role: Backend Developer. Required technical skills: API development, Python, SQL.",
+      "resume_text": "Skills list: API development, Python, SQL. No project or work details are provided.",
+      "expected_requirements": [
+        "api development",
+        "python",
+        "sql"
+      ],
+      "expected_statuses": {
+        "api development": "missing",
+        "python": "matched",
+        "sql": "matched"
+      }
+    },
+    {
+      "id": "nosql_mongodb_partial",
+      "role": "Backend Developer",
+      "profile_type": "adversarial",
+      "job_description": "Role: Backend Developer. Required technical skills: NoSQL, Python, FastAPI.",
+      "resume_text": "Built a small application with MongoDB and Python. Used FastAPI to expose endpoints.",
+      "expected_requirements": [
+        "nosql",
+        "python",
+        "fastapi"
+      ],
+      "expected_statuses": {
+        "nosql": "partially_matched",
+        "python": "matched",
+        "fastapi": "matched"
+      }
+    },
+    {
+      "id": "github_url_not_usage_evidence",
+      "role": "Software Engineer",
+      "profile_type": "adversarial",
+      "job_description": "Role: Software Engineer. Required technical skills: GitHub, Python, Docker.",
+      "resume_text": "Portfolio: github.com/example-user. Coursework included Python; no Docker project experience is described.",
+      "expected_requirements": [
+        "github",
+        "python",
+        "docker"
+      ],
+      "expected_statuses": {
+        "github": "missing",
+        "python": "matched",
+        "docker": "missing"
+      }
+    },
+    {
+      "id": "express_word_not_express_js",
+      "role": "Backend Developer",
+      "profile_type": "adversarial",
+      "job_description": "Role: Backend Developer. Required technical skills: Express.js, JavaScript, SQL.",
+      "resume_text": "I express ideas clearly. I have experience with JavaScript and SQL.",
+      "expected_requirements": [
+        "express.js",
+        "javascript",
+        "sql"
+      ],
+      "expected_statuses": {
+        "express.js": "missing",
+        "javascript": "matched",
+        "sql": "matched"
+      }
+    }
+  ]
+}

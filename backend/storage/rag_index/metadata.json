@@ -1,0 +1,32 @@
+[
+  {
+    "source": "backend_development.txt",
+    "chunk_id": 1,
+    "text": "Backend Development Skills\n\nREST API Development:\nREST APIs allow applications to communicate using HTTP methods such\nas GET, POST, PUT, PATCH, and DELETE.\n\nDevelopers should understand request validation, response structures,\nHTTP status codes, error handling, authentication, and API documentation.\n\nFastAPI:\nFastAPI is a Python framework for building APIs.\nImportant topics include path operations, Pydantic models, dependency\ninjection, middleware, exception handling, and automatic OpenAPI docs.\n\nTesting:\nUnit testing checks individual functions or components.\nIntegration testing verifies that multiple components work together.\nAPI tests can validate status codes, response bodies, and error cases.\n\nDatabases:\nSQL databases include PostgreSQL and MySQL.\nNoSQL databases include MongoDB and Cassandra.\nDevelopers should understand data modeling, indexing, queries, and\ndatabase connection man"
+  },
+  {
+    "source": "backend_development.txt",
+    "chunk_id": 2,
+    "text": "L and MySQL.\nNoSQL databases include MongoDB and Cassandra.\nDevelopers should understand data modeling, indexing, queries, and\ndatabase connection management.\n\nDeployment:\nApplication deployment makes software available in an environment\nwhere users or other systems can access it.\nRelevant concepts include Docker, environment variables, CI/CD pipelines,\nlogging, monitoring, and cloud infrastructure.\n\nMicroservices:\nMicroservices architecture separates an application into independently\ndeployable services. Important considerations include communication,\nservice discovery, monitoring, fault tolerance, and data consistency."
+  },
+  {
+    "source": "interview_preparation.txt",
+    "chunk_id": 1,
+    "text": "Machine Learning Skills\n\nPython:\nPython is commonly used for machine learning, data processing,\nautomation, and backend development.\n\nData Processing:\nCandidates should understand data cleaning, missing values,\nfeature engineering, dataset splitting, and data leakage.\n\nModel Evaluation:\nClassification metrics include accuracy, precision, recall, and F1-score.\nA confusion matrix shows the relationship between actual and predicted\nclasses.\n\nOverfitting:\nOverfitting occurs when a model performs well on training data but\ngeneralizes poorly to unseen data.\nPossible techniques to address overfitting include data augmentation,\nregularization, early stopping, and improved validation procedures.\n\nDeep Learning:\nDeep learning uses neural networks to learn representations from data.\nConvolutional neural networks are commonly used for image classification.\nTransfer learning adapts pretrained models"
+  },
+  {
+    "source": "interview_preparation.txt",
+    "chunk_id": 2,
+    "text": "learn representations from data.\nConvolutional neural networks are commonly used for image classification.\nTransfer learning adapts pretrained models to a target task."
+  },
+  {
+    "source": "machine_learning.txt",
+    "chunk_id": 1,
+    "text": "Machine Learning Skills\n\nPython:\nPython is commonly used for machine learning, data processing,\nautomation, and backend development.\n\nData Processing:\nCandidates should understand data cleaning, missing values,\nfeature engineering, dataset splitting, and data leakage.\n\nModel Evaluation:\nClassification metrics include accuracy, precision, recall, and F1-score.\nA confusion matrix shows the relationship between actual and predicted\nclasses.\n\nOverfitting:\nOverfitting occurs when a model performs well on training data but\ngeneralizes poorly to unseen data.\nPossible techniques to address overfitting include data augmentation,\nregularization, early stopping, and improved validation procedures.\n\nDeep Learning:\nDeep learning uses neural networks to learn representations from data.\nConvolutional neural networks are commonly used for image classification.\nTransfer learning adapts pretrained models"
+  },
+  {
+    "source": "machine_learning.txt",
+    "chunk_id": 2,
+    "text": "learn representations from data.\nConvolutional neural networks are commonly used for image classification.\nTransfer learning adapts pretrained models to a target task."
+  }
+]

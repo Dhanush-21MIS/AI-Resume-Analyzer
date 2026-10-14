@@ -1,0 +1,94 @@
+{
+  "description": "Manually labeled test cases for app.requirement_extractor.extract_requirements. Expected items are canonical requirement names based on the current extractor's ALIASES mapping. This is a small diagnostic dataset, not a representative benchmark.",
+  "cases": [
+    {
+      "id": "backend_stack",
+      "job_description": "Required: Python, FastAPI, PostgreSQL, and Docker. Experience with pytest is preferred.",
+      "expected_requirements": [
+        "python",
+        "fastapi",
+        "postgresql",
+        "docker",
+        "pytest"
+      ],
+      "expected_importance": {
+        "python": 1.5,
+        "fastapi": 1.5,
+        "postgresql": 1.5,
+        "docker": 1.5,
+        "pytest": 0.7
+      }
+    },
+    {
+      "id": "alias_normalization",
+      "job_description": "We use React and React.js on the frontend, Express for APIs, and Postgres as our database.",
+      "expected_requirements": [
+        "react.js",
+        "express.js",
+        "postgresql"
+      ]
+    },
+    {
+      "id": "javascript_java_boundary",
+      "job_description": "The candidate must know JavaScript. Java experience is not required.",
+      "expected_requirements": [
+        "javascript",
+        "java"
+      ]
+    },
+    {
+      "id": "cloud_aliases",
+      "job_description": "Knowledge of Amazon Web Services, Microsoft Azure, and Google Cloud Platform is preferred.",
+      "expected_requirements": [
+        "aws",
+        "azure",
+        "gcp"
+      ],
+      "expected_importance": {
+        "aws": 0.7,
+        "azure": 0.7,
+        "gcp": 0.7
+      }
+    },
+    {
+      "id": "ml_stack",
+      "job_description": "Responsibilities include machine learning, PyTorch, TensorFlow, OpenCV, and data analysis.",
+      "expected_requirements": [
+        "machine learning",
+        "pytorch",
+        "tensorflow",
+        "opencv",
+        "data analysis"
+      ]
+    },
+    {
+      "id": "no_recognized_skills",
+      "job_description": "We need a motivated candidate with strong communication, teamwork, and a positive attitude.",
+      "expected_requirements": []
+    },
+    {
+      "id": "empty_description",
+      "job_description": "",
+      "expected_requirements": []
+    },
+    {
+      "id": "hyphen_and_alias_phrases",
+      "job_description": "Required: object-oriented programming and retrieval-augmented generation (RAG). The team uses continuous integration and continuous delivery.",
+      "expected_requirements": [
+        "object-oriented programming",
+        "rag",
+        "ci/cd"
+      ],
+      "expected_importance": {
+        "object-oriented programming": 1.5,
+        "rag": 1.5,
+        "ci/cd": 1.0
+      }
+    }
+  ],
+  "top_n_check": {
+    "job_description": "Python, JavaScript, React, FastAPI, PostgreSQL, Docker, Kubernetes, and Redis.",
+    "top_n": 3,
+    "expected_count": 3
+  }
+}
